@@ -2,10 +2,14 @@ img {
   width: 100%;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #ffffff;
   font-family: 'Noto Sans JP', sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   /* Sets the font size to 16px */
   font-weight: 200;
   /* Sets the font weight to 300 */
@@ -14,11 +18,17 @@ body {
   color: #000000;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: 'Noto Serif JP', sans-serif;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   line-height: 1.4;
 }
 
@@ -42,6 +52,74 @@ h4 {
   font-weight: 200;
 }
 
+#hero h1 {
+  text-align: center;
+  /* Centers text */
+}
+
+#contact h2 {
+  text-align: center;
+  /*
+  Centers text */
+}
+
+#title h1 {
+  text-align: center;
+  /* Centers text */
+}
+
+#work h2 {
+  text-align: left;
+}
+
+#work h3 {
+  text-align: left;
+}
+
+#work p {
+  text-align: left;
+}
+
+header {
+  background-color: #ffffff;
+  text-align: center;
+  padding: 10px 0;
+  box-shadow: 1px 4px 9px 0px rgba(50, 50, 50, 0.2);
+  position: fixed;
+  width: 100%;
+}
+
+.logo {
+  max-width: 250px;
+}
+
+main {
+  padding-top: 191px;
+}
+
+footer {
+  padding: 0px 0;
+  text-align: center;
+  width: 100%;
+  position: static;
+}
+
+nav>ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav>ul>li {
+  display: inline-block;
+}
+
+nav>ul>li>a {
+  padding: 0 15px;
+  font-weight: 350;
+  display: inline-block;
+  list-style-type: none;
+}
+
 a {
   color: #48bfe3;
   text-decoration: none;
@@ -52,24 +130,25 @@ a {
   font-weight: 300;
 }
 
-a:visited {
+nav>ul>li>a:visited {
   /* visited link */
   color: #48bfe3;
 }
 
-a:hover, a:focus {
+nav>ul>li>a:hover, a:focus {
   color: #48bfe3;
   text-decoration: underline;
   /* Underlining when hovering over a link */
 }
 
-a:active {
+nav>ul>li>a:active {
   /* selected link */
   color: #48bfe3;
 }
 
 .button {
   display: inline-block;
+  margin: 0 auto;
   /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
   background-color: #5b6c5d;
   color: #ffffff;
@@ -128,7 +207,7 @@ a:active {
   border: 2px solid #48bfe3;
 }
 
-.button.contact:visited {
+.button.cv:visited {
   /* visited link */
   color: #48bfe3;
 }
@@ -143,8 +222,87 @@ a:active {
   color: #ffffff;
 }
 
-/*
-Colors used:
-Primary Color (Blue): #05676e;
-Secondary Color (Green): #489c79;
-*/
+/* Layout styling */
+.container {
+  padding: 0 15px;
+}
+
+.row {
+  margin: 25px auto;
+  /* 25px top and bottom, 0 left and right */
+}
+
+#work .row {
+  padding-bottom: 25px;
+  border-bottom: 1px solid #4a4a4a;
+  max-width: 1000px
+}
+
+#work1 .row {
+  max-width: 1000px
+}
+
+#hero {
+  background-color: #ffffff;
+  padding-top: 20px;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+
+#title {
+  padding: 20px 0;
+}
+
+#resume {
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+
+#picture {
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+#aboutsection {
+  margin: 0 auto;
+  max-width: 1000px
+}
+
+#skills {
+  margin: 0 auto;
+  max-width: 1000px;
+  border-bottom: 1px solid #4a4a4a;
+  padding-bottom: 35px;
+}
+
+.in {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  padding: 0 5px
+}
+
+.be {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  padding: 0 5px
+}
+
+#icons>ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#icons>ul>li {
+  display: inline-block;
+}
+
+#icons>ul>li>a {
+  margin: 0 auto;
+  font-weight: 350;
+  display: inline-block;
+  list-style-type: none;
+}
