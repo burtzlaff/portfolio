@@ -9,7 +9,7 @@ img {
 body {
   background-color: #ffffff;
   font-family: 'Noto Sans JP', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   /* Sets the font size to 16px */
   font-weight: 200;
   /* Sets the font weight to 300 */
@@ -69,15 +69,15 @@ h4 {
 }
 
 #work h2 {
-  text-align: left;
+  text-align: center;
 }
 
 #work h3 {
   text-align: left;
 }
 
-#work p {
-  text-align: left;
+#proj1descrip {
+  text-align: left
 }
 
 header {
@@ -157,8 +157,9 @@ nav>ul>li>a:active {
   padding: 10px;
   border-radius: 3px;
   border-bottom: 2px solid #5b6c5d;
+  transition-duration: 0.2s;
+  transition-property: opacity;
   /* width of the border, type, color */
-  transition: 0.2s opacity;
 }
 
 .button:visited {
@@ -173,9 +174,9 @@ nav>ul>li>a:active {
 }
 
 .button:active {
-  background-color: #5b6c5d color: #ffffff
-    /* Reduces the opacity of the button to 80% */
-    text-decoration: none;
+  background-color: #5b6c5d;
+  color: #ffffff;
+  text-decoration: none;
 }
 
 .button.contact {
@@ -183,6 +184,7 @@ nav>ul>li>a:active {
   color: #5b6c5d;
   text-transform: uppercase;
   border: 2px solid #5b6c5d;
+  transition-duration: 0.2s;
 }
 
 .button.contact:visited {
@@ -205,6 +207,7 @@ nav>ul>li>a:active {
   color: #48bfe3;
   text-transform: uppercase;
   border: 2px solid #48bfe3;
+  transition-duration: 0.2s;
 }
 
 .button.cv:visited {
@@ -235,11 +238,11 @@ nav>ul>li>a:active {
 #work .row {
   padding-bottom: 25px;
   border-bottom: 1px solid #4a4a4a;
-  max-width: 1000px
+  width: 100%;
 }
 
 #work1 .row {
-  max-width: 1000px
+  width: 100%;
 }
 
 #hero {
@@ -260,21 +263,36 @@ nav>ul>li>a:active {
   padding-bottom: 30px;
 }
 
+.container.cv {
+  display: block;
+}
+
 #picture {
   margin: 0 auto;
   max-width: 400px;
 }
 
 #aboutsection {
-  margin: 0 auto;
-  max-width: 1000px
+  display: inline-block;
+  width: 100%;
 }
 
 #skills {
-  margin: 0 auto;
-  max-width: 1000px;
-  border-bottom: 1px solid #4a4a4a;
-  padding-bottom: 35px;
+  display: inline-block;
+  text-align: left;
+  width: 100%;
+}
+
+#skills h2 {
+  text-align: center;
+}
+
+#contact {
+  background-color: #ffffff;
+  padding-top: 20px;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
 }
 
 .in {
@@ -306,3 +324,158 @@ nav>ul>li>a:active {
   display: inline-block;
   list-style-type: none;
 }
+
+@keyframes color-change {
+  0% {
+    stroke: #000000;
+  }
+
+  20% {
+    stroke: #112C35;
+  }
+
+  40% {
+    stroke: #21596A;
+  }
+
+  60% {
+    stroke: #33859F;
+  }
+
+  80% {
+    stroke: #3FA7C6;
+  }
+
+  100% {
+    stroke: #48bfe3;
+  }
+}
+
+.circle {
+  animation-duration: 7s;
+  animation-name: color-change;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+@keyframes l-move {
+  from {
+    transform: translate(0px, -10px);
+  }
+
+  to {
+    transform: translate(0px, 10px);
+  }
+}
+
+.l {
+  animation-duration: 12s;
+  animation-name: l-move;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+@keyframes b-move {
+  from {
+    transform: translate(0px, 0px);
+  }
+
+  to {
+    transform: translate(-15px, 0px);
+  }
+}
+
+.b {
+  animation-duration: 10s;
+  animation-name: b-move;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+/* ==============================
+Medium devices (640px and larger)
+================================= */
+@media only screen and (min-width: 640px) {
+  header {
+    text-align: unset;
+  }
+
+  nav {
+    width: auto;
+    float: right;
+    margin-top: 20px;
+  }
+
+  main {
+    padding-top: 134px;
+  }
+
+  #hero span {
+    display: block;
+  }
+
+  #skills h3 {
+    text-align: center;
+  }
+
+  #skills {
+    display: inline-block;
+  }
+
+  .col-md-6 {
+    width: 50%;
+  }
+
+  [class*="col-"] {
+    float: left;
+    padding: 10px
+  }
+
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
+
+/* ==============================
+Large devices (1024px or larger)
+================================= */
+@media only screen and (min-width: 1024px) {
+  .col-lg-5 {
+    width: 41.66%;
+  }
+
+  .col-lg-6 {
+    width: 50%;
+  }
+
+  .col-lg-7 {
+    width: 58.33%;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  [class*="col-"] {
+    float: left;
+    padding: 10px
+  }
+
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
+
+/* ==============================
+X-large devices (1440px or larger)
+================================= */
+@media only screen and (min-width: 1440px) {}
