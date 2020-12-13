@@ -13,27 +13,34 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
   </style>
+  <script src="https://kit.fontawesome.com/17f67e2c6a.js" crossorigin="anonymous"></script>
+  <style>
+  html {
+  scroll-behavior: smooth;
+  }</style>
 </head>
+
 
 <body>
 
   <header>
     <div class="container">
+      <div class="navtoggle" id="myNavtoggle">
       <?xml version="1.0" encoding="UTF-8"?>
       <svg id="photo" width="108px" height="108px" viewBox="0 0 108 108" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <title>Logo</title>
         <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
           <g id="A4" transform="translate(-49.000000, -28.000000)">
             <g id="Logo" transform="translate(49.000000, 28.000000)">
-              <text id="L" font-family="AvenirNext-UltraLight, Avenir Next" font-size="35" font-weight="200" letter-spacing="2.66301" fill="#001329">
+              <text id="L" font-family="AvenirNext-UltraLight, Avenir Next" font-size="35" font-weight="200" letter-spacing="2.66301" fill="#001329" class="l">
                 <tspan x="27" y="58">L</tspan>
               </text>
-              <text id="B" font-family="AvenirNext-UltraLight, Avenir Next" font-size="35" font-weight="200" letter-spacing="2.66301" fill="#001329">
+              <text id="B" font-family="AvenirNext-UltraLight, Avenir Next" font-size="35" font-weight="200" letter-spacing="2.66301" fill="#001329" class="b">
                 <tspan x="56" y="84">B</tspan>
               </text>
-              <line x1="21.3881579" y1="80.6118421" x2="79.6118421" y2="22.3881579" id="Line" stroke="#815C5C" stroke-width="0.5" stroke-linecap="square"></line>
-              <line x1="21.3881579" y1="84.6118421" x2="79.6118421" y2="26.3881579" id="Line" stroke="#815C5C" stroke-width="0.5" stroke-linecap="square"></line>
-              <circle id="Oval" stroke="#000000" cx="54" cy="54" r="53.5"></circle>
+              <line x1="21.3881579" y1="80.6118421" x2="79.6118421" y2="22.3881579" id="Line" stroke="#5b6c5d" stroke-width="0.5" stroke-linecap="square"></line>
+              <line x1="21.3881579" y1="84.6118421" x2="79.6118421" y2="26.3881579" id="Line" stroke="#5b6c5d" stroke-width="0.5" stroke-linecap="square"></line>
+              <circle id="Oval" stroke="#000000" cx="54" cy="54" r="53.5" class="circle"></circle>
             </g>
           </g>
         </g>
@@ -42,10 +49,13 @@
         <ul>
           <li><a href="index.html">Work</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact" onclick="menuToggle()">Contact</a></li>
+          <li><a href="#skills"onclick="menuToggle()">Skills</a></li>
+          <li><a href="javascript:void(0);" class="icon" onclick="menuToggle()"><i class="fas fa-bars"></i></a></li>
+
         </ul>
       </nav>
+    </div>
     </div>
   </header>
   <main>
@@ -155,6 +165,7 @@
       <p> Copyright Lisa Burtzlaff 2020</p>
     </div>
   </footer>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="js/scripts.js"></script>
 </body>
 
