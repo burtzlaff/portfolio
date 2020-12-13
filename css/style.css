@@ -109,8 +109,6 @@ nav>ul {
   margin: 0;
 }
 
-
-
 a {
   color: #48bfe3;
   text-decoration: none;
@@ -120,6 +118,7 @@ a {
 a {
   font-weight: 300;
 }
+
 nav>ul>li>a {
   padding: 0 15px;
   font-weight: 350;
@@ -141,12 +140,15 @@ nav>ul>li>a:active {
   /* selected link */
   color: #48bfe3;
 }
+
 .navtoggle li:not(:last-child) {
   display: none;
 }
+
 .navtoggle, .navtoggle.responsive {
   position: relative;
 }
+
 .navtoggle li .icon {
   position: absolute;
   right: 0;
@@ -158,14 +160,15 @@ nav>ul>li>a:active {
 .navtoggle.responsive nav {
   padding: 24px 0 0;
 }
-.navtoggle.responsive li  {
+
+.navtoggle.responsive li {
   display: block;
   padding: 10px 0;
   border-top: 1px solid #5b6c5d;
 }
-/* might switch to green 5b6c5d*/
 
-.navtoggle.responsive li:last-child  {
+/* might switch to green 5b6c5d*/
+.navtoggle.responsive li:last-child {
   padding: 0 0 10px;
 }
 
@@ -423,7 +426,6 @@ nav>ul>li>a:active {
 Medium devices (640px and larger)
 ================================= */
 @media only screen and (min-width: 640px) {
-
   header {
     text-align: unset;
   }
@@ -433,23 +435,26 @@ Medium devices (640px and larger)
     float: right;
     margin-top: 20px;
   }
+
   nav>ul>li {
     display: inline-block;
   }
-  nav > ul {
-  margin: 1em 0;
-}
-.navtoggle.responsive li  {
-  border-top: none;
-}
 
-.navtoggle li:not(:last-child) {
-  display: inline-block;
-}
+  nav>ul {
+    margin: 1em 0;
+  }
 
-.navtoggle li:last-child {
-  display: none;
-}
+  .navtoggle.responsive li {
+    border-top: none;
+  }
+
+  .navtoggle li:not(:last-child) {
+    display: inline-block;
+  }
+
+  .navtoggle li:last-child {
+    display: none;
+  }
 
   main {
     padding-top: 134px;
