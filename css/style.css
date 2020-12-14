@@ -535,7 +535,12 @@ Large devices (1024px or larger)
     clear: both;
     display: table;
   }
-}
+
+  .col-lg-5{
+    float: right;
+  }
+
+
 
 /* ==============================
 X-large devices (1440px or larger)
