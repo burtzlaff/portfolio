@@ -538,13 +538,16 @@ Large devices (1024px or larger)
 
   .col-lg-5{
     float: left;
-  }
+
+}
+
   .col-lg-7{
     float: left;
+
   }
 
 
-
+}
 /* ==============================
 X-large devices (1440px or larger)
 ================================= */
