@@ -543,40 +543,6 @@ Large devices (1024px or larger)
     float: left;
   }
 
-#aboutsection {
-  display:inline-block;
-}
-
-#aboutsection .container {
-  display: inline-block;
-}
-
-#aboutsection h2 {
-  display: inline-block;
-}
-#aboutsection .row {
-  display: inline-block;
-}
-#aboutsection .col-lg-7 {
-  display: inline-block;
-}
-#writing1 {
-  display: inline-block;
-}
-#writing2 {
-  display: inline-block;
-}
-#resume {
-  text-align: center;
-  padding-top: 40px;
-  padding-bottom: 30px;
-  padding-left: auto;
-  padding-right: auto;
-}
-#resume.container {
-  width:100%;
-}
-
 
 
 /* ==============================
