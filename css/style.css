@@ -569,12 +569,23 @@ Large devices (1024px or larger)
     padding-bottom: 15px;
   }
 
+  #skills h2, {
+    padding-top: 15px;
+  }
+
   #skills-list {
     padding-left: 50px;
   }
 
   #tools-list {
     padding-left: 50px;
+  }
+
+  #aboutsection {
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
