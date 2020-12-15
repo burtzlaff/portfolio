@@ -157,10 +157,6 @@ nav>ul>li>a:active {
   padding-right: 0;
 }
 
-.navtoggle.responsive nav {
-  padding: 24px 0 0;
-}
-
 .navtoggle.responsive li {
   display: block;
   padding: 10px 0;
@@ -446,6 +442,7 @@ Medium devices (640px and larger)
 
   .navtoggle.responsive li {
     border-top: none;
+    padding: 0 0;
   }
 
   .navtoggle li:not(:last-child) {
@@ -478,7 +475,7 @@ Medium devices (640px and larger)
     display: inline-block;
   }
 
-  #skills .row{
+  #skills .row {
     margin: 0 auto;
   }
 
@@ -500,7 +497,6 @@ Medium devices (640px and larger)
     clear: both;
     display: table;
   }
-
 }
 
 /* ==============================
@@ -525,6 +521,27 @@ Large devices (1024px or larger)
     margin-right: auto;
   }
 
+  .col-lg-7 {
+    float: left;
+  }
+
+  .skills-tools {
+    width: 40% margin: 0
+  }
+
+  .skills-row.row {
+    width: 41.66% margin: 0;
+    display: inline-block;
+  }
+
+  #skills h2, h3 {
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    display: inline-block;
+    float: right;
+  }
+
   [class*="col-"] {
     float: left;
     padding: 10px
@@ -536,18 +553,31 @@ Large devices (1024px or larger)
     display: table;
   }
 
-  .col-lg-5{
-    float: left;
-
-}
-
-  .col-lg-7{
-    float: left;
-
+  #skills {
+    width: 41.66%;
   }
 
+  .col-lg-5 {
+    float: right;
+  }
 
+  #skills .col-lg-5 {
+    width: 100%;
+  }
+
+  #skills h2, h3 {
+    padding-bottom: 15px;
+  }
+
+  #skills-list {
+    padding-left: 50px;
+  }
+
+  #tools-list {
+    padding-left: 50px;
+  }
 }
+
 /* ==============================
 X-large devices (1440px or larger)
 ================================= */
