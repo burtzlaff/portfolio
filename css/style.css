@@ -54,11 +54,13 @@ h4 {
 
 #hero h1 {
   text-align: center;
+  padding-bottom: 15px;
   /* Centers text */
 }
 
 #contact h2 {
   text-align: center;
+  padding-top: 30px;
   /*
   Centers text */
 }
@@ -70,6 +72,7 @@ h4 {
 
 #work h2 {
   text-align: center;
+  padding-top: 25px;
 }
 
 #work h3 {
@@ -77,24 +80,26 @@ h4 {
 }
 
 #proj1descrip {
-  text-align: left
+  text-align: left;
 }
+
 
 header {
   background-color: #ffffff;
-  padding: 10px 0 4px;
-  box-shadow: 1px 4px 9px 0px rgba(50, 50, 50, 0.2);
+  padding: 3px 0 4px;
+  box-shadow: 0px 3px 14px 0px rgba(50, 50, 50, 0.10);
   position: fixed;
   width: 100%;
-  height: 14%;
+  height: 70px;
 }
 
 .logo {
   max-width: 250px;
+  padding-top: 10px;
 }
 
 main {
-  padding-top: 120px;
+  padding-top: 60px;
 }
 
 footer {
@@ -153,15 +158,16 @@ nav>ul>li>a:active {
 .navtoggle li .icon {
   position: absolute;
   right: 0;
-  top: 2px;
+  top: 15px;
   font-size: 20px;
-  padding-right: 0;
+  padding-right: 8px;
 }
 
 .navtoggle.responsive li {
   display: block;
   padding: 10px 0;
   border-top: 1px solid #5b6c5d;
+  background-color: #ffffff;
 }
 
 /* might switch to green 5b6c5d*/
@@ -259,13 +265,15 @@ nav>ul>li>a:active {
 }
 
 #work .row {
+  padding-top: 25px;
   padding-bottom: 25px;
-  border-bottom: 1px solid #4a4a4a;
   width: 100%;
 }
 
 #work1 .row {
   width: 100%;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 #hero {
@@ -292,6 +300,7 @@ nav>ul>li>a:active {
 
 #picture {
   margin: 0 auto;
+  padding-bottom: 30px;
   max-width: 400px;
 }
 
@@ -305,6 +314,7 @@ nav>ul>li>a:active {
   text-align: left;
   width: 100%;
   scroll-padding-top: 200px;
+  padding-top: 30px
 }
 
 #skills h2 {
@@ -313,33 +323,46 @@ nav>ul>li>a:active {
 
 #contact {
   background-color: #ffffff;
-  padding-top: 20px;
+  padding-top: 70px;
   display: inline-block;
   text-align: center;
   width: 100%;
 }
+#border {
+  border-top: 1px solid #4a4a4a;
+}
 
 .in {
   display: inline-block;
-  width: 3em;
-  height: 3em;
-  padding: 0 5px
+  width: 2em;
+  height: 2em;
+  padding: 0 0px
 }
+
 
 .be {
   display: inline-block;
-  width: 3em;
-  height: 3em;
-  padding: 0 5px
+  width: 2em;
+  height: 2em;
+  padding: 0 0px
+}
+.git {
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  padding: 0 0px
 }
 
 #icons>ul {
   list-style-type: none;
-  padding: 0;
+  padding-inline-start: 0px;
+
 }
 
 #icons>ul>li {
   display: inline-block;
+  padding: 0 20px;
+
 }
 
 #icons>ul>li>a {
@@ -347,6 +370,10 @@ nav>ul>li>a:active {
   font-weight: 400;
   display: inline-block;
   list-style-type: none;
+}
+
+#icons {
+  padding: 10px 0px 0px;
 }
 
 @keyframes color-change {
@@ -430,7 +457,7 @@ Medium devices (640px and larger)
   nav {
     width: auto;
     float: right;
-    margin-top: 13px;
+    margin-top: auto;
   }
 
   nav>ul>li {
@@ -455,7 +482,7 @@ Medium devices (640px and larger)
   }
 
   main {
-    padding-top: 134px;
+    padding-top: 60px;
   }
 
   #hero span {
@@ -517,7 +544,7 @@ Large devices (1024px or larger)
   }
 
   .container {
-    max-width: 1200px;
+    max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -588,6 +615,11 @@ Large devices (1024px or larger)
     margin-left: auto;
     margin-right: auto;
   }
+  #intro {
+    width: 85%;
+    margin: auto;
+  }
+
 }
 
 /* ==============================
