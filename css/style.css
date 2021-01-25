@@ -79,8 +79,12 @@ h4 {
   text-align: left;
 }
 
-#proj1descrip {
+#proj-descrip {
   text-align: left;
+}
+
+#tools {
+  font-weight: 400;
 }
 
 
@@ -294,6 +298,15 @@ nav>ul>li>a:active {
   padding-bottom: 30px;
 }
 
+#resume-contact {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#mail-btn {
+  padding-top: 20px;
+}
+
 .container.cv {
   display: block;
 }
@@ -373,7 +386,7 @@ nav>ul>li>a:active {
 }
 
 #icons {
-  padding: 10px 0px 0px;
+  padding: 1px 0px 0px;
 }
 
 @keyframes color-change {
