@@ -188,6 +188,8 @@ nav>ul>li>a:active {
   /* needed to override the default link color */
   font-weight: 400;
   padding: 10px;
+  margin-block-start: .5em;
+    margin-block-end: .5em;
   border-radius: 3px;
   border-bottom: 2px solid #5b6c5d;
   transition-duration: 0.2s;
