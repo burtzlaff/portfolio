@@ -8,10 +8,10 @@ img {
 
 body {
   background-color: #ffffff;
-  font-family: 'Noto Sans JP', sans-serif;
-  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
   /* Sets the font size to 16px */
-  font-weight: 200;
+  font-weight: 300;
   /* Sets the font weight to 300 */
   line-height: 1.6;
   /* Sets the line-height to 1.6 * the font-size */
@@ -22,7 +22,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: 'Noto Serif JP', sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 h1,
@@ -33,23 +33,25 @@ h4 {
 }
 
 h1 {
-  font-size: 2.25em;
+  font-family: 'Lato', sans-serif;
+  font-size: 2.35em;
   font-weight: 200;
+  font-kerning: 2.88;
 }
 
 h2 {
   font-size: 1.75em;
-  font-weight: 200;
+  font-weight: 300;
 }
 
 h3 {
   font-size: 1.35em;
-  font-weight: 200;
+  font-weight: 300;
 }
 
 h4 {
   font-size: 1.15em;
-  font-weight: 200;
+  font-weight: 300;
 }
 
 #hero h1 {
@@ -84,22 +86,26 @@ h4 {
 }
 
 #tools {
-  font-weight: 400;
+  font-weight: 200;
 }
 
 
 header {
-  background-color: #ffffff;
-  padding: 3px 0 4px;
+  background-color: #FFFFFF;
+  padding: 3px 0px 4px;
+  padding-left: 50px;
+  padding-right: 50px;
   box-shadow: 0px 3px 14px 0px rgba(50, 50, 50, 0.10);
   position: fixed;
   width: 100%;
   height: 70px;
+  font-weight: 100;
 }
 
 .logo {
-  max-width: 250px;
-  padding-top: 10px;
+  max-width: 1000px;
+  padding-top: 12px;
+  padding-left:30px;
 }
 
 main {
@@ -120,7 +126,7 @@ nav>ul {
 }
 
 a {
-  color: #1880A0;
+  color: #2C2D3A;
   text-decoration: none;
   /* No underlining */
 }
@@ -131,24 +137,23 @@ a {
 
 nav>ul>li>a {
   padding: 0 15px;
-  font-weight: 400;
+  font-weight: 300;
   list-style-type: none;
 }
 
 nav>ul>li>a:visited {
   /* visited link */
-  color: #1880A0;
+  color: #2C2D3A;
 }
 
 nav>ul>li>a:hover, a:focus {
-  color: #1880A0;
-  text-decoration: underline;
-  /* Underlining when hovering over a link */
+  color: #777C8C;
+  text-decoration: none;
 }
 
 nav>ul>li>a:active {
   /* selected link */
-  color: #1880A0;
+  color: #777C8C;
 }
 
 .navtoggle li:not(:last-child) {
@@ -170,8 +175,8 @@ nav>ul>li>a:active {
 .navtoggle.responsive li {
   display: block;
   padding: 10px 0;
-  border-top: 1px solid #5b6c5d;
-  background-color: #ffffff;
+  border-top: 1px solid #2C2D3A;
+  background-color: #FFFFFF;
 }
 
 /* might switch to green 5b6c5d*/
@@ -183,108 +188,284 @@ nav>ul>li>a:active {
   display: inline-block;
   margin: 0 auto;
   /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
-  background-color: #5b6c5d;
+  background-color: #2C2D3A;
   color: #ffffff;
+  border-color: #2C2D3A;
   /* needed to override the default link color */
-  font-weight: 400;
+  font-weight: 300;
   padding: 10px;
   margin-block-start: .5em;
     margin-block-end: .5em;
   border-radius: 3px;
-  border-bottom: 2px solid #5b6c5d;
-  transition-duration: 0.2s;
-  transition-property: opacity;
+  border-bottom: 2px solid #2C2D3A;
+  border: 2px solid #2C2D3A;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: border-radius;
+  transition-property: border-radius;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+
+}
+.button:before {
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  content: '';
+  top: 100%;
+  left: 5%;
+  height: 10px;
+  width: 90%;
+  opacity: 0;
+  background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+  /* W3C */
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform, opacity;
+  transition-property: transform, opacity;
+}
+.button:hover, .hvr-float-shadow:focus, .hvr-float-shadow:active {
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+  border-radius: 1em;
+  transition-duration: 0.3s;
   /* width of the border, type, color */
 }
-
+.button:hover:before, .hvr-float-shadow:focus:before, .hvr-float-shadow:active:before {
+  opacity: 1;
+  -webkit-transform: translateY(5px);
+  transform: translateY(5px);
+  border-radius: 1em;
+  transition-duration: 0.3s;
+}
 .button:visited {
   /* visited link */
   color: #ffffff;
 }
 
-.button:hover, .button:focus {
-  opacity: 0.8;
-  /* Reduces the opacity of the button to 80% */
-  text-decoration: none;
-}
 
-.button:active {
-  background-color: #5b6c5d;
-  color: #ffffff;
-  text-decoration: none;
-}
+
+
+
+
 .button.proto {
   background-color: transparent;
-  font-weight: 300;
-  padding: 10px;
-  margin-block-start: .5em;
-    margin-block-end: .5em;
-    margin-inline-end: .5em;
-  border-radius: 1px;
-  border-bottom: 1px;
-  color: #5b6c5d;
-  border: 1px solid #5b6c5d;
-  transition-duration: 0.2s;
+  color: #2C2D3A;
+  border: 1px solid #2C2D3A;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: border-radius;
+  transition-property: border-radius, background-color;
+vertical-align: middle;
+-webkit-transform: perspective(1px) translateZ(0);
+transform: perspective(1px) translateZ(0);
+box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+position: relative;
+-webkit-transition-duration: 0.3s;
+transition-duration: 0.3s;
+-webkit-transition-property: transform;
+transition-property: transform;
+
+}
+.button.proto:before {
+pointer-events: none;
+position: absolute;
+z-index: -1;
+content: '';
+top: 100%;
+left: 5%;
+height: 10px;
+width: 90%;
+opacity: 0;
+background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+/* W3C */
+-webkit-transition-duration: 0.3s;
+transition-duration: 0.3s;
+-webkit-transition-property: transform, opacity;
+transition-property: transform, opacity;
+}
+.button.proto:hover, .hvr-float-shadow:focus, .hvr-float-shadow:active {
+-webkit-transform: translateY(-5px);
+transform: translateY(-5px);
+/* width of the border, type, color */
+}
+.button.proto:hover:before, .hvr-float-shadow:focus:before, .hvr-float-shadow:active:before {
+opacity: 1;
+-webkit-transform: translateY(5px);
+transform: translateY(5px);
 }
 
 .button.proto:visited {
   /* visited link */
-  color: #5b6c5d;
+  color: #2C2D3A;
 }
 
 .button.proto:hover, .button.proto:focus {
-  background-color: #73877b;
+  background-color: #2C2D3A;
   color: #ffffff;
+  border-radius: 1em;
+  transition-duration: 0.3s;
 }
 
 .button.proto:active {
-  background-color: #5b6c5d;
+  background-color: #2C2D3A;
   color: #ffffff;
 }
 
 .button.contact {
   background-color: transparent;
-  color: #5b6c5d;
+  color: #2C2D3A;
   text-transform: uppercase;
-  border: 2px solid #5b6c5d;
-  transition-duration: 0.2s;
-}
+  border: 2px solid #2C2D3A;
+  transition-duration: 0.3s;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: border-radius;
+  transition-property: border-radius;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+
+  }
+  .button.contact:before {
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  content: '';
+  top: 100%;
+  left: 5%;
+  height: 10px;
+  width: 90%;
+  opacity: 0;
+  background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+  /* W3C */
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform, opacity;
+  transition-property: transform, opacity;
+  }
+  .button.contact:hover, .hvr-float-shadow:focus, .hvr-float-shadow:active {
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+  /* width of the border, type, color */
+  }
+  .button.contact:hover:before, .hvr-float-shadow:focus:before, .hvr-float-shadow:active:before {
+  opacity: 1;
+  -webkit-transform: translateY(5px);
+  transform: translateY(5px);
+  }
+
 
 .button.contact:visited {
   /* visited link */
-  color: #5b6c5d;
+  color: #2C2D3A;
 }
 
 .button.contact:hover, .button.contact:focus {
-  background-color: #73877b;
+  background-color: #2C2D3A;
   color: #ffffff;
+  opacity: 1;
+  border-radius: 1em;
 }
 
 .button.contact:active {
-  background-color: #5b6c5d;
+  background-color: #2C2D3A;
   color: #ffffff;
 }
 
 .button.cv {
   background-color: transparent;
-  color: #1880A0;
+  color: #2C2D3A;
   text-transform: uppercase;
-  border: 2px solid #1880A0;
-  transition-duration: 0.2s;
-}
+  border: 2px solid #2C2D3A;
+  transition-duration: 0.3s;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: border-radius;
+  transition-property: border-radius;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+
+  }
+  .button.cv:before {
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  content: '';
+  top: 100%;
+  left: 5%;
+  height: 10px;
+  width: 90%;
+  opacity: 0;
+  background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+  /* W3C */
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform, opacity;
+  transition-property: transform, opacity;
+  }
+  .button.cv:hover, .hvr-float-shadow:focus, .hvr-float-shadow:active {
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+  /* width of the border, type, color */
+  }
+  .button.cv:hover:before, .hvr-float-shadow:focus:before, .hvr-float-shadow:active:before {
+  opacity: 1;
+  -webkit-transform: translateY(5px);
+  transform: translateY(5px);
+  }
+
 
 .button.cv:visited {
   /* visited link */
-  color: #1880A0;
+  color: #2C2D3A;
 }
 
 .button.cv:hover, .button.cv:focus {
-  background-color: #1880A0;
+  background-color: #2C2D3A;
   color: #ffffff;
+  opacity: 1;
+  border-radius: 1em;
 }
 
 .button.cv:active {
-  background-color: #1880A0;
+  background-color: #2C2D3A;
   color: #ffffff;
 }
 
@@ -413,6 +594,16 @@ nav>ul>li>a:active {
   font-weight: 400;
   display: inline-block;
   list-style-type: none;
+}
+#icons>ul>li>a:hover, a:focus {
+  color: #20A0C8;
+  text-decoration: none;
+  opacity: .7;
+}
+
+nav>ul>li>a:active {
+  /* selected link */
+  color: #20A0C8;
 }
 
 #icons {
@@ -587,7 +778,7 @@ Large devices (1024px or larger)
   }
 
   .container {
-    max-width: 1000px;
+    max-width: 1100px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -617,6 +808,10 @@ Large devices (1024px or larger)
     float: left;
     padding: 10px
   }
+  #proj-descrip.col-lg-5 {
+    padding-top: 35px
+  }
+
 
   .row::after {
     content: "";
